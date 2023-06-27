@@ -13,11 +13,11 @@
             <objects>
                 <viewController title="FirstView" id="BYZ-38-t0r" customClass="FirstView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-pC-Ncc">
-                                <rect key="frame" x="30" y="323.33333333333331" width="333" height="205.66666666666669"/>
+                                <rect key="frame" x="30" y="318.33333333333331" width="333" height="205.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4r-pM-01N">
                                         <rect key="frame" x="70" y="0.0" width="193" height="34"/>
@@ -38,20 +38,15 @@
                                             <segue destination="5ug-s6-zbl" kind="show" id="DDY-BU-4L0"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="ABG-II-MzE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-Ms-XbR">
                                         <rect key="frame" x="90.000000000000014" y="171.33333333333337" width="153.33333333333337" height="34.333333333333343"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-Ms-XbR">
-                                                <rect key="frame" x="0.0" y="0.0" width="153.33333333333334" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
-                                                <connections>
-                                                    <action selector="tapForgetPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fU-aT-qha"/>
-                                                    <segue destination="u75-QS-S0B" kind="show" id="13j-sQ-u20"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                        <connections>
+                                            <action selector="tapForgetPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fU-aT-qha"/>
+                                            <segue destination="u75-QS-S0B" kind="show" id="13j-sQ-u20"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="t4r-pM-01N" firstAttribute="leading" secondItem="yhV-pC-Ncc" secondAttribute="leading" constant="70" id="AFW-Bv-ngU"/>
@@ -70,6 +65,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhV-pC-Ncc" secondAttribute="trailing" constant="30" id="iEe-sX-uzs"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kZn-b3-0Ed"/>
                     <connections>
                         <outlet property="forgetPasswordButton" destination="rSk-Ms-XbR" id="jbE-2T-H2Q"/>
                         <outlet property="helpButton" destination="1bM-fL-yT7" id="MLa-d0-gYS"/>
@@ -90,60 +86,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="IfD-dy-fkg">
-                                <rect key="frame" x="76.666666666666686" y="160" width="240" height="522"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Девичья фамилия матери" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnK-yG-Z6l">
-                                        <rect key="frame" x="19" y="0.0" width="202" height="115.33333333333333"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя лучшей подруги" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TT-Ad-H9t">
-                                        <rect key="frame" x="35" y="159.33333333333331" width="170" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя той самой кошечки " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-F5-vgw">
-                                        <rect key="frame" x="22.333333333333329" y="237.33333333333331" width="195" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bM-fL-yT7">
-                                        <rect key="frame" x="65.333333333333329" y="315.33333333333331" width="108.99999999999999" height="34.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Подсказка"/>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="все таки видимо придется нажать на кнопку ниже...." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="voa-UD-vVF">
-                                        <rect key="frame" x="0.0" y="393.66666666666663" width="240" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFq-8P-fSb">
-                                        <rect key="frame" x="39" y="487.66666666666663" width="162" height="34.333333333333371"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Сбросить пароль"/>
-                                        <connections>
-                                            <segue destination="MnH-zY-mit" kind="showDetail" id="LyG-oc-FPf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bM-fL-yT7">
+                                <rect key="frame" x="142" y="404" width="109" height="34.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.329999999999998" id="2e1-c9-UZi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="GvJ-8I-XxB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Подсказка"/>
+                                <connections>
+                                    <action selector="helpButtonAction:" destination="u75-QS-S0B" eventType="touchUpInside" id="wcI-Qc-tG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFq-8P-fSb">
+                                <rect key="frame" x="115.66666666666669" y="647.66666666666663" width="162" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сбросить пароль"/>
+                                <connections>
+                                    <action selector="resetPasswordAction:" destination="u75-QS-S0B" eventType="touchUpInside" id="0B0-7T-Gpa"/>
+                                    <segue destination="MnH-zY-mit" kind="show" id="hQ2-f6-8HP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Девичья фамилия матери" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnK-yG-Z6l">
+                                <rect key="frame" x="79.666666666666686" y="268" width="234" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xxY-ck-8IV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IfD-dy-fkg" firstAttribute="centerX" secondItem="pG8-la-xjl" secondAttribute="centerX" id="bd6-ud-Nxd"/>
-                            <constraint firstItem="IfD-dy-fkg" firstAttribute="top" secondItem="xxY-ck-8IV" secondAttribute="top" constant="160" id="yTG-n2-NFj"/>
-                            <constraint firstItem="IfD-dy-fkg" firstAttribute="centerY" secondItem="pG8-la-xjl" secondAttribute="centerY" id="ych-eB-2XE"/>
+                            <constraint firstItem="1bM-fL-yT7" firstAttribute="centerX" secondItem="pG8-la-xjl" secondAttribute="centerX" id="38S-Qn-hdd"/>
+                            <constraint firstItem="xnK-yG-Z6l" firstAttribute="centerX" secondItem="pG8-la-xjl" secondAttribute="centerX" id="5HK-EB-GMV"/>
+                            <constraint firstItem="xnK-yG-Z6l" firstAttribute="top" secondItem="xxY-ck-8IV" secondAttribute="top" constant="268" id="AF7-qn-fDZ"/>
+                            <constraint firstItem="xxY-ck-8IV" firstAttribute="bottom" secondItem="mFq-8P-fSb" secondAttribute="bottom" constant="160" id="Xy0-2T-8XA"/>
+                            <constraint firstItem="1bM-fL-yT7" firstAttribute="centerY" secondItem="pG8-la-xjl" secondAttribute="centerY" id="d2T-Mb-A4F"/>
+                            <constraint firstItem="mFq-8P-fSb" firstAttribute="centerX" secondItem="pG8-la-xjl" secondAttribute="centerX" id="lAK-1l-fST"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DjG-5H-5py"/>
+                    <connections>
+                        <outlet property="adviceText" destination="xnK-yG-Z6l" id="LOj-j8-XKt"/>
+                        <outlet property="resetPassword" destination="mFq-8P-fSb" id="nzE-dP-ZUD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cm7-jh-Ha3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-431.29770992366412" y="705.63380281690149"/>
+            <point key="canvasLocation" x="-422" y="707"/>
         </scene>
         <!--ResetLoginView-->
         <scene sceneID="QDK-XC-7ZC">
@@ -170,6 +159,7 @@
                             <constraint firstItem="SBk-Qi-oen" firstAttribute="top" secondItem="3af-o6-Th2" secondAttribute="top" constant="145" id="k0e-8I-NS4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="n4g-FO-fDN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yq-l2-Epp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,6 +183,9 @@
                                 <rect key="frame" x="60" y="677" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Chc-mz-drG"/>
+                                </connections>
                             </button>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiT-6x-fgM">
                                 <rect key="frame" x="0.0" y="772" width="393" height="60"/>
@@ -225,15 +218,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkQ-6V-ZBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="-27"/>
+            <point key="canvasLocation" x="789" y="-762"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
