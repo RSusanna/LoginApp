@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstView: UIViewController {
     
     @IBOutlet var login: UITextField!
     @IBOutlet var password: UITextField!
@@ -22,5 +22,9 @@ class ViewController: UIViewController {
         
         login.placeholder = "Введите логин"
         password.placeholder = "Введите пароль"
+    }
+    @IBAction func tapForgetPasswordButton(_ sender: Any) {
+    }
+    @IBAction func tapLogInButton(_ sender: Any) {
     }
 }

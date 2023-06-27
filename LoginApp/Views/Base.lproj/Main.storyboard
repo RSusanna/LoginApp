@@ -11,7 +11,7 @@
         <!--FirstView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="FirstView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="FirstView" id="BYZ-38-t0r" customClass="FirstView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                         <connections>
+                                            <action selector="tapLogInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6K-wW-QQB"/>
                                             <segue destination="5ug-s6-zbl" kind="show" id="DDY-BU-4L0"/>
                                         </connections>
                                     </button>
@@ -45,7 +46,8 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
                                                 <connections>
-                                                    <segue destination="u75-QS-S0B" kind="showDetail" id="6r7-Xy-cRp"/>
+                                                    <action selector="tapForgetPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fU-aT-qha"/>
+                                                    <segue destination="u75-QS-S0B" kind="show" id="13j-sQ-u20"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -69,7 +71,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgetPasswordButton" destination="rSk-Ms-XbR" id="xgV-Lg-qtf"/>
+                        <outlet property="forgetPasswordButton" destination="rSk-Ms-XbR" id="jbE-2T-H2Q"/>
                         <outlet property="helpButton" destination="1bM-fL-yT7" id="MLa-d0-gYS"/>
                         <outlet property="logInButton" destination="oIk-Gr-9ZK" id="5fl-o4-HXt"/>
                         <outlet property="login" destination="t4r-pM-01N" id="HRm-iE-EGA"/>
@@ -83,7 +85,7 @@
         <!--ForgottenLoginView-->
         <scene sceneID="Wua-TM-E9d">
             <objects>
-                <viewController title="ForgottenLoginView" id="u75-QS-S0B" customClass="ViewController" customModule="ForgottenLoginView" sceneMemberID="viewController">
+                <viewController title="ForgottenLoginView" id="u75-QS-S0B" customClass="ForgottenLoginView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pG8-la-xjl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,27 +94,27 @@
                                 <rect key="frame" x="76.666666666666686" y="160" width="240" height="522"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Девичья фамилия матери" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnK-yG-Z6l">
-                                        <rect key="frame" x="19" y="0.0" width="202" height="37.333333333333336"/>
+                                        <rect key="frame" x="19" y="0.0" width="202" height="115.33333333333333"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя лучшей подруги" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TT-Ad-H9t">
-                                        <rect key="frame" x="35" y="81.333333333333343" width="170" height="34"/>
+                                        <rect key="frame" x="35" y="159.33333333333331" width="170" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя той самой кошечки " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-F5-vgw">
-                                        <rect key="frame" x="22.333333333333329" y="159.33333333333331" width="195" height="34"/>
+                                        <rect key="frame" x="22.333333333333329" y="237.33333333333331" width="195" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bM-fL-yT7">
-                                        <rect key="frame" x="65.333333333333329" y="237.33333333333331" width="108.99999999999999" height="34.333333333333314"/>
+                                        <rect key="frame" x="65.333333333333329" y="315.33333333333331" width="108.99999999999999" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Подсказка"/>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="все таки видимо придется нажать на кнопку ниже...." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="voa-UD-vVF">
-                                        <rect key="frame" x="0.0" y="315.66666666666669" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="393.66666666666663" width="240" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -137,6 +139,7 @@
                             <constraint firstItem="IfD-dy-fkg" firstAttribute="centerY" secondItem="pG8-la-xjl" secondAttribute="centerY" id="ych-eB-2XE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DjG-5H-5py"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cm7-jh-Ha3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +148,7 @@
         <!--ResetLoginView-->
         <scene sceneID="QDK-XC-7ZC">
             <objects>
-                <viewController title="ResetLoginView" id="MnH-zY-mit" customClass="ViewContorller" customModule="ResetLoginView" sceneMemberID="viewController">
+                <viewController title="ResetLoginView" id="MnH-zY-mit" customClass="ResetLoginView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f8U-KA-af3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +178,7 @@
         <!--ProfileView-->
         <scene sceneID="jy2-EJ-3Sc">
             <objects>
-                <viewController title="ProfileView" id="5ug-s6-zbl" sceneMemberID="viewController">
+                <viewController title="ProfileView" id="5ug-s6-zbl" customClass="ProfileView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZhJ-Gw-OTF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
