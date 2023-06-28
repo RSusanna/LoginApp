@@ -173,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Привет красотка нереалка" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iem-z8-5Hp">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Привет красотка нереалка" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iem-z8-5Hp">
                                 <rect key="frame" x="92" y="115" width="209" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -213,8 +213,17 @@
                             <constraint firstItem="aiT-6x-fgM" firstAttribute="leading" secondItem="6Rg-6e-z7H" secondAttribute="leading" id="tFg-bN-bcc"/>
                             <constraint firstItem="6Rg-6e-z7H" firstAttribute="bottom" secondItem="aiT-6x-fgM" secondAttribute="bottom" constant="10" id="xYQ-MC-5P8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Iem-z8-5Hp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0DI-25-eYa"/>
+                    <connections>
+                        <outlet property="exit" destination="mrg-eF-2ci" id="Eze-yJ-3Be"/>
+                        <outlet property="welcomingText" destination="Iem-z8-5Hp" id="zb4-zM-kPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkQ-6V-ZBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

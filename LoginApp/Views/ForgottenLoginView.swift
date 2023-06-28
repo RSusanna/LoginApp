@@ -11,8 +11,8 @@ class ForgottenLoginView: UIViewController {
     //MARK: кнопочки
     @IBOutlet var helpButton: UIButton!
     @IBOutlet var resetPassword: UIButton!
-    //MARK: текст
     
+    //MARK: текст
     @IBOutlet var adviceText: UITextField!
     
     
