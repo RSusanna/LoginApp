@@ -13,9 +13,11 @@
 		D18B0F4D2A4A0CAA008E93F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18B0F4B2A4A0CAA008E93F4 /* Main.storyboard */; };
 		D18B0F4F2A4A0CB0008E93F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18B0F4E2A4A0CB0008E93F4 /* Assets.xcassets */; };
 		D18B0F522A4A0CB0008E93F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18B0F502A4A0CB0008E93F4 /* LaunchScreen.storyboard */; };
+		D1C3F3942A50EB04006DB2B3 /* File in Resources */ = {isa = PBXBuildFile; fileRef = D1C3F3932A50EB04006DB2B3 /* File */; };
 		D1CB05452A4B704500415C87 /* ForgottenLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB05442A4B704500415C87 /* ForgottenLoginView.swift */; };
 		D1CB05472A4B705F00415C87 /* ResetLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB05462A4B705F00415C87 /* ResetLoginView.swift */; };
 		D1CB05492A4B707900415C87 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CB05482A4B707900415C87 /* ProfileView.swift */; };
+		D1CF96452A5341390032A835 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CF96432A5341390032A835 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		D18B0F4E2A4A0CB0008E93F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D18B0F512A4A0CB0008E93F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D18B0F532A4A0CB0008E93F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C3F3932A50EB04006DB2B3 /* File */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = File; sourceTree = "<group>"; };
 		D1CB05442A4B704500415C87 /* ForgottenLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenLoginView.swift; sourceTree = "<group>"; };
 		D1CB05462A4B705F00415C87 /* ResetLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetLoginView.swift; sourceTree = "<group>"; };
 		D1CB05482A4B707900415C87 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D1CF96442A5341390032A835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LoginApp/Views/Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				D18B0F492A4A0CAA008E93F4 /* FirstView.swift */,
-				D1CB05442A4B704500415C87 /* ForgottenLoginView.swift */,
-				D1CB05462A4B705F00415C87 /* ResetLoginView.swift */,
 				D1CB05482A4B707900415C87 /* ProfileView.swift */,
+				D1CB05462A4B705F00415C87 /* ResetLoginView.swift */,
+				D1CB05442A4B704500415C87 /* ForgottenLoginView.swift */,
 				D18B0F4B2A4A0CAA008E93F4 /* Main.storyboard */,
+				D1CF96432A5341390032A835 /* Storyboard.storyboard */,
+				D1C3F3932A50EB04006DB2B3 /* File */,
 				D18B0F502A4A0CB0008E93F4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -151,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18B0F522A4A0CB0008E93F4 /* LaunchScreen.storyboard in Resources */,
+				D1C3F3942A50EB04006DB2B3 /* File in Resources */,
 				D18B0F4F2A4A0CB0008E93F4 /* Assets.xcassets in Resources */,
 				D18B0F4D2A4A0CAA008E93F4 /* Main.storyboard in Resources */,
+				D1CF96452A5341390032A835 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +197,14 @@
 				D18B0F512A4A0CB0008E93F4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D1CF96432A5341390032A835 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1CF96442A5341390032A835 /* Base */,
+			);
+			name = Storyboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

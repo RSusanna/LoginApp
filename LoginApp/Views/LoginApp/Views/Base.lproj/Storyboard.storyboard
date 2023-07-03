@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileView" id="Y6W-OH-hqX" customClass="ProfileView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppn-ta-fYK">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hd-ve-iMX">
+                                <rect key="frame" x="44" y="675" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="C9c-3z-bjK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="cMB-iZ-uCF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GJ5-7E-DnS"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNX-m4-b6l">
+                                <rect key="frame" x="0.0" y="772" width="393" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="04X-Nw-9dk"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Профиль" image="person" catalog="system" id="k3S-qf-Ktf"/>
+                                    <tabBarItem title="Личное" image="person.fill" catalog="system" id="Udn-6Z-F5C"/>
+                                </items>
+                            </tabBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="funnyCat" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-fL-glh">
+                                <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="2Eo-Ae-jGT"/>
+                                    <constraint firstAttribute="width" constant="240" id="679-fv-nkN"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LtA-YG-VUp">
+                                <rect key="frame" x="74.666666666666686" y="572" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="GDl-yg-Nb1"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покрути слайдер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPb-sB-AWW">
+                                <rect key="frame" x="127" y="628" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Hd-ve-iMX" secondAttribute="trailing" symbolic="YES" id="8FZ-CC-kkg"/>
+                            <constraint firstAttribute="bottom" secondItem="vNX-m4-b6l" secondAttribute="bottom" id="BAY-F0-Knd"/>
+                            <constraint firstItem="LtA-YG-VUp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CcU-3u-zDa"/>
+                            <constraint firstItem="RPb-sB-AWW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ist-Xo-bBv"/>
+                            <constraint firstItem="vNX-m4-b6l" firstAttribute="top" secondItem="6Hd-ve-iMX" secondAttribute="bottom" constant="62" id="Kfb-dL-DG4"/>
+                            <constraint firstItem="vNX-m4-b6l" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Lwa-TT-T7J"/>
+                            <constraint firstItem="RPb-sB-AWW" firstAttribute="top" secondItem="LtA-YG-VUp" secondAttribute="bottom" constant="26" id="THC-Ut-4li"/>
+                            <constraint firstItem="WRw-fL-glh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aWX-zW-QBs"/>
+                            <constraint firstItem="6Hd-ve-iMX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="44" id="kBs-Im-dXf"/>
+                            <constraint firstItem="WRw-fL-glh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="qOE-Bc-E77"/>
+                            <constraint firstItem="LtA-YG-VUp" firstAttribute="top" secondItem="WRw-fL-glh" secondAttribute="bottom" constant="26" id="reg-2X-WrX"/>
+                            <constraint firstItem="vNX-m4-b6l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zPW-8Q-2U6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="6Hd-ve-iMX" id="RRv-KM-3d4"/>
+                        <outlet property="funnyImage" destination="WRw-fL-glh" id="Izz-oK-2qr"/>
+                        <outlet property="personTapBar" destination="vNX-m4-b6l" id="pLD-D6-47y"/>
+                        <outlet property="personal" destination="Udn-6Z-F5C" id="1d1-Eq-oP5"/>
+                        <outlet property="profile" destination="k3S-qf-Ktf" id="8RZ-d8-xY6"/>
+                        <outlet property="slider" destination="LtA-YG-VUp" id="rM8-pD-jAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.458015267175568" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="funnyCat" width="300" height="168"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

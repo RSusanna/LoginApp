@@ -13,11 +13,11 @@
             <objects>
                 <viewController title="FirstView" id="BYZ-38-t0r" customClass="FirstView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-pC-Ncc">
-                                <rect key="frame" x="30" y="318.33333333333331" width="333" height="205.66666666666669"/>
+                                <rect key="frame" x="30" y="323.33333333333331" width="333" height="205.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4r-pM-01N">
                                         <rect key="frame" x="70" y="0.0" width="193" height="34"/>
@@ -35,7 +35,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                         <connections>
                                             <action selector="tapLogInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6K-wW-QQB"/>
-                                            <segue destination="5ug-s6-zbl" kind="show" id="DDY-BU-4L0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-Ms-XbR">
@@ -103,8 +102,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Сбросить пароль"/>
                                 <connections>
-                                    <action selector="resetPasswordAction:" destination="u75-QS-S0B" eventType="touchUpInside" id="0B0-7T-Gpa"/>
-                                    <segue destination="MnH-zY-mit" kind="show" id="hQ2-f6-8HP"/>
+                                    <action selector="resetPasswordAction:" destination="u75-QS-S0B" eventType="touchUpInside" id="AyM-sG-YOM"/>
+                                    <segue destination="MnH-zY-mit" kind="show" id="UPB-1V-g2J"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Девичья фамилия матери" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnK-yG-Z6l">
@@ -127,6 +126,7 @@
                     <navigationItem key="navigationItem" id="DjG-5H-5py"/>
                     <connections>
                         <outlet property="adviceText" destination="xnK-yG-Z6l" id="LOj-j8-XKt"/>
+                        <outlet property="helpButton" destination="1bM-fL-yT7" id="hsY-3s-YSB"/>
                         <outlet property="resetPassword" destination="mFq-8P-fSb" id="nzE-dP-ZUD"/>
                     </connections>
                 </viewController>
@@ -165,74 +165,8 @@
             </objects>
             <point key="canvasLocation" x="330.53435114503816" y="707.04225352112678"/>
         </scene>
-        <!--ProfileView-->
-        <scene sceneID="jy2-EJ-3Sc">
-            <objects>
-                <viewController title="ProfileView" id="5ug-s6-zbl" customClass="ProfileView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZhJ-Gw-OTF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Привет красотка нереалка" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iem-z8-5Hp">
-                                <rect key="frame" x="92" y="115" width="209" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrg-eF-2ci">
-                                <rect key="frame" x="60" y="677" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Выход"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Chc-mz-drG"/>
-                                </connections>
-                            </button>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiT-6x-fgM">
-                                <rect key="frame" x="0.0" y="772" width="393" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="sRJ-2X-obJ"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="тык" image="heart" catalog="system" id="AZS-2f-6vs">
-                                        <color key="badgeColor" red="0.87058823529999996" green="0.0" blue="0.2135128043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Жмякни сюда" image="heart.fill" catalog="system" id="z6v-Px-uY7">
-                                        <color key="badgeColor" red="0.87058823529999996" green="0.0" blue="0.2135128043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tabBarItem>
-                                </items>
-                            </tabBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Rg-6e-z7H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aiT-6x-fgM" firstAttribute="trailing" secondItem="6Rg-6e-z7H" secondAttribute="trailing" id="5UP-Tp-gBd"/>
-                            <constraint firstItem="mrg-eF-2ci" firstAttribute="leading" secondItem="6Rg-6e-z7H" secondAttribute="leading" constant="60" id="DG8-Mc-H48"/>
-                            <constraint firstItem="6Rg-6e-z7H" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mrg-eF-2ci" secondAttribute="trailing" symbolic="YES" id="Mwq-Ts-OiX"/>
-                            <constraint firstItem="aiT-6x-fgM" firstAttribute="top" secondItem="mrg-eF-2ci" secondAttribute="bottom" constant="60" id="Sej-0Z-7GV"/>
-                            <constraint firstItem="aiT-6x-fgM" firstAttribute="leading" secondItem="6Rg-6e-z7H" secondAttribute="leading" id="tFg-bN-bcc"/>
-                            <constraint firstItem="6Rg-6e-z7H" firstAttribute="bottom" secondItem="aiT-6x-fgM" secondAttribute="bottom" constant="10" id="xYQ-MC-5P8"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Iem-z8-5Hp"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="0DI-25-eYa"/>
-                    <connections>
-                        <outlet property="exit" destination="mrg-eF-2ci" id="Eze-yJ-3Be"/>
-                        <outlet property="welcomingText" destination="Iem-z8-5Hp" id="zb4-zM-kPh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vkQ-6V-ZBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="789" y="-762"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

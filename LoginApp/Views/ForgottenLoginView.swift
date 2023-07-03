@@ -45,5 +45,9 @@ class ForgottenLoginView: UIViewController {
             break
         }
     }
+    
+    @IBAction func resetPasswordAction(_ sender: Any) {
+        
+    }
 }
 
