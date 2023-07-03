@@ -8,7 +8,13 @@
 import UIKit
 
 
-class ProfileView: UIViewController {
+
+
+
+
+
+
+class ProfileView: UIViewController, UITabBarDelegate {
     
     @IBOutlet var funnyImage: UIImageView!
     
@@ -23,6 +29,16 @@ class ProfileView: UIViewController {
     @IBOutlet var personal: UITabBarItem!
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +50,10 @@ class ProfileView: UIViewController {
         exitButton.setTitle("выход", for: .normal)
         profile.title = "профиль"
         personal.title = "личное"
+        personTapBar.delegate = self
+        
+        
+
         
         //MARK: - логика для слайдера
         slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
@@ -51,17 +71,23 @@ class ProfileView: UIViewController {
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         
-        let firstView = FirstView()
-        firstView.modalPresentationStyle = .fullScreen
-        self.present(firstView, animated: true, completion: nil)
-    }
-    
-    
-    //MARK: - логика для тап бара
-    
-    let personalView = UIViewController()
-    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "FirstView")
+        firstViewController.modalPresentationStyle = .fullScreen
+        self.present(firstViewController, animated: true, completion: nil)
     }
     
 
 
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+
+// определяем какая кнопка была нажата
+        if item == personal {
+            // Выполните необходимые действия для открытия нового представления
+          //  let anotherViewController = UIViewController(coder: personalViiew)
+       //     let storyboard = UIViewController(coder: personalViiew)
+        //    personalViiew.modalPresentationStyle = .fullScreen
+          //  self.present(personalViiew, animated: true, completion: nil)
+        }
+    }
+}
