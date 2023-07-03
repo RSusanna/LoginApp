@@ -51,10 +51,8 @@ class FirstView: UIViewController {
         }
         if usernameText == "1" && passwordText == "1" {
             // Создание экземпляра ProfileView из сториборда
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+            
             let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
             let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileView")
             // Установка модального стиля на fullScreen
