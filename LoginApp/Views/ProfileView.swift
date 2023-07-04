@@ -53,7 +53,7 @@ class ProfileView: UIViewController, UITabBarDelegate {
         personTapBar.delegate = self
         
         
-
+        
         
         //MARK: - логика для слайдера
         slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
@@ -77,17 +77,21 @@ class ProfileView: UIViewController, UITabBarDelegate {
         self.present(firstViewController, animated: true, completion: nil)
     }
     
-
-
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-
-// определяем какая кнопка была нажата
-        if item == personal {
-            // Выполните необходимые действия для открытия нового представления
-          //  let anotherViewController = UIViewController(coder: personalViiew)
-       //     let storyboard = UIViewController(coder: personalViiew)
-        //    personalViiew.modalPresentationStyle = .fullScreen
-          //  self.present(personalViiew, animated: true, completion: nil)
+    //MARK: - логика для тап бара
+    
+    func tabBar( _ tabBar: UITabBar, didSelect item: UITabBarItem ) {
+        if item == profile {
+        
+            navigationController?.popToViewController(self, animated: false)
+            
+        } else if item == personal {
+            let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+                   let personalViewController = storyboard.instantiateViewController(withIdentifier: "PersonalView")
+                   navigationController?.pushViewController(personalViewController, animated: true)
+               }
+           }
         }
-    }
-}
+        
+    
+
+

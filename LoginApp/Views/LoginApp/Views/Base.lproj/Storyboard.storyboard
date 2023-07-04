@@ -87,23 +87,22 @@
                         <outlet property="personal" destination="Udn-6Z-F5C" id="1d1-Eq-oP5"/>
                         <outlet property="profile" destination="k3S-qf-Ktf" id="8RZ-d8-xY6"/>
                         <outlet property="slider" destination="LtA-YG-VUp" id="rM8-pD-jAt"/>
-                        <segue destination="emm-41-Fqy" kind="showDetail" id="UP3-9F-aUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-40.458015267175568" y="-28.169014084507044"/>
         </scene>
-        <!--personalViiew-->
+        <!--personalView-->
         <scene sceneID="VUs-8H-6uS">
             <objects>
-                <viewController storyboardIdentifier="personalViiew" title="personalViiew" id="emm-41-Fqy" customClass="personalViiew" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Ll-pA-o6F">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                <viewController storyboardIdentifier="PersonalView" title="personalView" id="emm-41-Fqy" customClass="PersonalView" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PersonalView" id="6Ll-pA-o6F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ммм секретики..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7s-X2-Dx2">
-                                <rect key="frame" x="126" y="245" width="141" height="21"/>
+                                <rect key="frame" x="126" y="304" width="141" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="SxB-uz-V49"/>
                                 </constraints>
